@@ -1,0 +1,177 @@
+*,html{
+    box-sizing: border-box;
+}
+.app-container,.home-container,.body-container{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.header-container{
+    width: 100%;
+    height: 35px;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    height: 30px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+ul>li{
+    margin-right: 15px;
+}
+li>a{
+    text-decoration: none;
+    color: white;
+}
+
+/* //////////////////////// */
+
+.login-layout, .signup-layout{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.account
+{
+  position: absolute;
+  width: 330px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+.account .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 40px; */
+}
+.account .content h2 
+{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.login-layout .account .content h2{
+    color: orange;
+}
+.signup-layout .account .content h2{
+    color:  yellow;
+}
+.form{
+    width: 100%;
+}
+.account .content .form form
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-gap: 25px;
+    gap: 25px;
+    align-items: center;
+}
+.account .content .form .inputBox
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.account .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+.account .content .form .inputBox label 
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.account .content .form .inputBox input:focus ~ label,
+.account .content .form .inputBox input:valid ~ label
+{
+  transform: translateY(-11.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.account .content .form .links 
+{
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.account .content .form .links span
+{
+  color: #fff;
+  text-decoration: none;
+}
+.account .content .form .links a:nth-child(2)
+{
+  font-weight: 600;
+  text-decoration: none;
+}
+.login-layout .account .content .form .links a:nth-child(2){
+    color: yellow;
+}
+.signup-layout .account .content .form .links a:nth-child(2){
+    color: orange;
+}
+.account .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.login-layout .account .content .form .inputBox input[type="submit"]{
+    background: orange;
+}
+.signup-layout .account .content .form .inputBox input[type="submit"]{
+    background: yellow;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+.additionalinfo {
+    color: white;
+    margin-top: -15px;
+    font-size: small;
+}
