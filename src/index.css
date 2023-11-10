@@ -12,3 +12,5 @@ code {
     monospace;
 }
 @import "./components/styles/Home.css";
+@import "./components/styles/Header.css";
+@import "./components/styles/Carousel.css";

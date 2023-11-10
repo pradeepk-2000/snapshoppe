@@ -1,22 +1,26 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
+import Header from "./Header";
+import MainPage from "../templates/MainPage";
+import Profile from "../templates/Profile";
 
 function Home(){
-    const navigate = useNavigate();
-    const handleLogout =()=>{
-        sessionStorage.removeItem("loginStatus");
-        navigate("/login");
-    }
-    
+     
     return(
+        <>
+        <div className="header-container">
+        <Header/>
+        </div>
+
         <div className="home-container">
-               <p>hellooooo</p>
-               <a href="/estore/profile">profile</a>
-               <a href="/estore/account">account</a>
-               <button onClick={handleLogout}>Logout</button>
-                <Outlet/>
-            </div>
+                <Routes>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/profile" element={<Profile/>} />
+                    <Route path="/cart" element={<div>Cart....</div>} />
+                    <Route path="*" element={<div>NotFound</div>}/>
+                </Routes>
+        </div>
+        </>
     )
 }
 export default React.memo(Home);
-// welcome login or create and a pic
