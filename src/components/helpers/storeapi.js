@@ -24,12 +24,17 @@ export const storeApi = ()=>{
     };
 
     const getAllProducts =()=>{
-        return api.getApi(`${storeUrl}/products`)
+        return api.getApi(`${storeUrl}/products?limit=99`)
     }
 
+    const getCategoryProducts =(category)=>{
+        return api.getApi(`${storeUrl}/product/category/${category}`)
+    }
+    
     return {
         login,
         create,
-        getAllProducts
+        getAllProducts,
+        getCategoryProducts
     }
 }

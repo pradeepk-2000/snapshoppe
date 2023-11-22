@@ -14,3 +14,5 @@ code {
 @import "./components/styles/Home.css";
 @import "./components/styles/Header.css";
 @import "./components/styles/Carousel.css";
+@import "./components/styles/Authentication.css";
+@import "../src/components/styles/HomeBottom.css";

@@ -5,7 +5,7 @@ import { faHouse, faCircleUser,faCartShopping,faMagnifyingGlass } from '@fortawe
 
 const Header = ()=>{
 
-    const placeholders = ['shoes', 'mobiles', 'shirts', 'sweaters', 'pants'];
+    const placeholders = ['shoes', 'womens-dresses','womens-jewellery', 'mens-shirts', 'laptops', 'groceries', 'sun glasses','fragrances', 'watches'];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [userInput, setUserInput] = useState('');
     const placeholderRef = useRef();
@@ -68,9 +68,13 @@ const Header = ()=>{
                     <select name="categories-select" id="dynamicSelect">
                         <option value="all">All</option>
                         <option value="clothes">Clothes</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="shoes">Foot wear</option>
-                        <option value="ingredients">Home ingredients</option>
+                        <option value="mobiles">Mobiles</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="skincare">Skincare</option>
+
                     </select>
                     </div>
                     <div className="search-input">
