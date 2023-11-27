@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { storeApi } from "../helpers/storeapi";
 import { uniqueCategories } from "../constants/constants";
 import SkeletonProducts from "./SkeletonProducts";
-import StarRating from "./StarRating";
+import AvgStarRating from "./AvgStarRating";
+import { Link } from "react-router-dom";
 
 const MainProducts = () =>{
     const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const MainProducts = () =>{
     useEffect(()=>{
         api.getAllProducts()
         .then((response)=>{
-          if(response !== null){
+          if(response !== null && response.products ){
             let products =  response.products;
             const selectedProducts = uniqueCategories.map((category) => {
             const productFromCategory = products?.find((product) => product.category === category);
@@ -22,11 +23,11 @@ const MainProducts = () =>{
                 setStatus(true);
             }
           else{
-              console.log("API ERROR"); 
+              console.log("API error"); 
             }
       })
       .catch((error)=>{
-          console.log(error + " Internal error")
+           console.log(error + " Network error")
       })
     },[]);
     
@@ -34,21 +35,21 @@ const MainProducts = () =>{
         <>
          <div className="top-categories"><span>Top Categories</span></div>
          <div className="main-products">
-            {status ?
+            {status  ?
                     products?.map((item,index)=>
                         {
                             let cat;
-                            if (item.category === 'mens-shoes' || item.category === 'womens-shoes') {
-                              cat = 'shoes';
-                            } else if (item.category === 'mens-watches' || item.category === 'womens-watches') {
-                              cat = 'watches';
-                            } else {
-                              cat = item.category;
-                            }
+                              if (item.category === 'mens-shoes' || item.category === 'womens-shoes') {
+                                cat = 'shoes';
+                              } else if (item.category === 'mens-watches' || item.category === 'womens-watches') {
+                                cat = 'watches';
+                              } else {
+                                cat = item.category;
+                              }                           
 
                             return(
                         <div className="product-items" key={index}>
-                         <a href={`/estore/search/${cat}`} >
+                         <Link to={`/estore/search/${cat}`} >
                            <div className="product-thumbnail">
                                <img src={item.thumbnail} alt={item.title} loading="lazy"/>
                            </div>
@@ -60,12 +61,13 @@ const MainProducts = () =>{
                                    <span>${item.price}</span>
                                </div>
                                <div className="item-rating">
-                                <StarRating rating={item.rating}/>
+                                <AvgStarRating rating={item.rating}/>
                                </div>
                            </div>
-                           </a>
+                           </Link>
                         </div>
-                        ) }             
+                        )
+                      }          
                     )
                     : <SkeletonProducts/>}
          </div>

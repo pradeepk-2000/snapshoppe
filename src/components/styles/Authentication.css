@@ -139,3 +139,8 @@ input[type="submit"]:active
     margin-top: -15px;
     font-size: small;
 }
+@media (max-width:450px){
+  .account{
+    max-width: 90%;
+  }
+}

@@ -5,6 +5,7 @@ import MainPage from "../templates/MainPage";
 import Profile from "../templates/Profile";
 import SearchProductCategory from "../templates/SearchProductCategory";
 import SearchProductIdCategory from "../templates/SearchProductIdCategory";
+import CartPage from "../templates/CartPage";
 
 function Home(){
      
@@ -18,7 +19,7 @@ function Home(){
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/profile" element={<Profile/>} />
-                    <Route path="/cart" element={<div>Cart....</div>} />
+                    <Route path="/cart" element={<CartPage/>} />
                     <Route path="/search/:category" element={<SearchProductCategory/>} />
                     <Route path="/search/:category/:id" element={<SearchProductIdCategory/>} />
                     <Route path="*" element={<div>NotFound</div>}/>

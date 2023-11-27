@@ -1,14 +1,14 @@
 import React from "react";
-import {Comments} from "../constants/constants";
+import {storeComments} from "../constants/constants";
 
-const UserComments = () =>{
+const StoreComments = () =>{
     return(
         <div className="store-comments">
             <div className="store-comments-heading">
                 Why They Like Us
             </div>
             <div className="user-comments-content">
-                {Comments?.map((elm,index)=>(
+                {storeComments?.map((elm,index)=>(
                     <div className="user-comments" key={index}>
                             <div className="comment">
                                 {elm.comment}
@@ -22,4 +22,4 @@ const UserComments = () =>{
         </div>
     )
 }
-export default React.memo(UserComments);
+export default React.memo(StoreComments);

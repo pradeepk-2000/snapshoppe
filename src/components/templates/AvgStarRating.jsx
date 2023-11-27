@@ -2,10 +2,10 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const StarRating = ({rating})=>{
+const AvgStarRating = ({rating})=>{
 
     return(
-        <div className="starRating">
+        <div className="avg-starRating">
             <FontAwesomeIcon icon={faStar} className={`star ${rating > 0 ? "fill" : ""}`}/>
             <FontAwesomeIcon icon={faStar} className={`star ${rating > 1 ? "fill" : ""}`}/>
             <FontAwesomeIcon icon={faStar} className={`star ${rating > 2 ? "fill" : ""}`}/>
@@ -14,4 +14,4 @@ const StarRating = ({rating})=>{
         </div>
     )
 }
-export default React.memo(StarRating)
+export default React.memo(AvgStarRating)

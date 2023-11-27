@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainProducts from "./MainProducts";
 import { carouselImages } from "../constants/constants";
 import { saleOffer,daysLeft,newProduct } from "../constants/constants";
-import UserComments from "./UserComments";
+import StoreComments from "./StoreComments";
 
 const MainPage = ()=>{
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,8 +51,8 @@ const MainPage = ()=>{
             <div className="mainpage-center">
                 <MainProducts/>
             </div>
-            <div className="store-user-commenst">
-                <UserComments/>
+            <div className="store-user-comments">
+                <StoreComments/>
             </div>
         </div>
     )

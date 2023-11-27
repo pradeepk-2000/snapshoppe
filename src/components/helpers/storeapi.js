@@ -30,11 +30,16 @@ export const storeApi = ()=>{
     const getCategoryProducts =(category)=>{
         return api.getApi(`${storeUrl}/product/category/${category}`)
     }
+
+    const getSpecificProduct = (id)=>{
+        return api.getApi(`${storeUrl}/product/${id}`)
+    }
     
     return {
         login,
         create,
         getAllProducts,
-        getCategoryProducts
+        getCategoryProducts,
+        getSpecificProduct
     }
 }

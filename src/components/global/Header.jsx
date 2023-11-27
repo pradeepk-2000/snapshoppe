@@ -94,7 +94,7 @@ const Header = ()=>{
                 </div>
                 <div className="navbar-collapse">
                     <ul>
-                        <li><NavLink to="/estore" activeclassname="active-link">
+                        <li><NavLink to="/estore" end activeclassname="active-link">
                         <FontAwesomeIcon icon={faHouse} id="fonticon"  />Home
                         </NavLink></li>
 

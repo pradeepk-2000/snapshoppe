@@ -46,7 +46,20 @@ export const carouselImages =[
         "https://assets.mspimages.in/gear/wp-content/uploads/2022/06/Best-Mobiles-with-6000-mAh-Battery.png",
 ];
 
-export const Comments = [
+export const productReviews =[
+    {
+        uName:"Yuvraj",
+        uReview:"Received last week and its excellent, packing is good",
+        uRating:4
+    },
+    {
+        uName:"Ashish",
+        uReview:"product is good but the cost is high compared to quality",
+        uRating:3
+    }
+]
+
+export const storeComments = [
     {
        comment: "Impressed with the seamless shopping experience and vast product range. Truly a wonderful ecommerce website!",
        author:"Glenn Maxwell"

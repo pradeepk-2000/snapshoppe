@@ -21,7 +21,7 @@ export const apiHelper = ()=>{
             }
         }
         catch(error){
-            return error;
+            throw new Error(error.message);
         }
     };
 

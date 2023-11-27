@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { storeApi } from "../helpers/storeapi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup (){
     const [username, setUsername] = useState("");
@@ -58,7 +58,7 @@ function Signup (){
     
           <div className="links"> 
           <span><input type="checkbox" id="showpassword" onChange={(e)=> setShowPassword(!showPassword)}/>show password </span>
-          <a href="/Login">Login</a> 
+          <Link to="/Login">Login</Link> 
           </div> 
     
           <div className="inputBox">     

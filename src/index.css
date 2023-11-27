@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,3 +20,4 @@ code {
 @import "./components/styles/Carousel.css";
 @import "./components/styles/Authentication.css";
 @import "../src/components/styles/HomeBottom.css";
+@import "./components//styles/productIdCategory.css";

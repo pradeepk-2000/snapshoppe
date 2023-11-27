@@ -55,19 +55,20 @@ const SearchProductCategory = ()=>{
         if(!allCategories.includes(category)){
             setCategoryError(true);
         }
+         
         else{
         const promises = updatedCategory.map((cat) => {
           return api.getCategoryProducts(cat)
             .then((response) => {
-              if (response !== null) {
+              if (response !== null && response.products) {
                 return response.products;
               } else {
-                console.log(`API ERROR for category: ${cat}`);
+                console.log(`API error for category: ${cat}`);
                 return [];
               }
             })
             .catch((error) => {
-              console.log(error + " Internal error");
+              console.log(error + " Network error");
               return [];
             });
         });
@@ -76,9 +77,11 @@ const SearchProductCategory = ()=>{
         Promise.all(promises)
           .then((productsArray) => {
             const allProducts = productsArray.flat();
+            if(allProducts.length>0){
             setProducts(allProducts);
             setStatus(true);
             setCategoryError(false);
+            }
           });
         }
       
@@ -88,17 +91,19 @@ const SearchProductCategory = ()=>{
     return(
         <div className="category-products">
             {categoryError ? 
-            <div>There are no products with {category}...</div> :
-            (
+            <div>There are no products with {category}...</div>
+            : (
             <>
             <div className="top-categories">
                 <span>{category}</span>
             </div>
-            <div className="searchCategory-products">   
+            <div className="search-productCategory">   
             {status ?
             <ProductItems productItems={products}/>
             : 
-            <SkeletonProducts/>}
+            <div className="skeleton-items">
+            <SkeletonProducts/>
+            </div>}
             </div>
             </>
             )}
