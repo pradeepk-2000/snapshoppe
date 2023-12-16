@@ -13,10 +13,12 @@ const CartPage = ()=>{
 
     return(
         <div className="cart-page">
-      {cartItems !== null ? (
+      {cartItems !== null && cartItems.length > 0 ?  (
         <ProductItems productItems={cartItems} deleteCart={contextData.editCart}/>
       ) : (
-        "No items in the cart ! Please add items to view"
+        <div className="cart-error">
+        <img id="cart-error-pic" src="https://skoozo.com/assets/img/empty-cart.png" alt="No Items"/>
+        </div>
       )}
     </div>
     )

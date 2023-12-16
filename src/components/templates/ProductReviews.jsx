@@ -4,6 +4,8 @@ import AvgStarRating from "./AvgStarRating";
 import CustomerStarRating from "./CustomerStarRating";
 
 const ProductReviews =()=>{
+    const [customerName, setCustomerName] = useState('');
+    const [customerReview, setCustomerReview] = useState('');
     const [notificationVisible, setNotificationVisible] = useState(false);
     const [notificationContent, setNotifictionContent] = useState("");
 
@@ -15,9 +17,15 @@ const ProductReviews =()=>{
       }, 3000);
     };
 
-    const handleReviewSubmit = () => {
+    const handleReviewSubmit = (e) => {
+      e.preventDefault();
+      if(!customerName.length>0 || !customerReview.length>0){
+        return;
+      }
       setNotifictionContent("Review sumitted successfully!");
       showNotification();
+      setCustomerName('');
+      setCustomerReview('');
     };
 
     return(
@@ -35,17 +43,19 @@ const ProductReviews =()=>{
                 ))}
             </div>
             <div className="customer-review">
+              <form id="customer-form" onSubmit={handleReviewSubmit}>
                 <div className="write-review">Write a Review</div>
                 <div className="customer-name">
                     <label id="label-name">Your name</label>
-                    <input type="text" name="cName" id="customer-input" required />
+                    <input type="text" name="cName" id="customer-input" value={customerName} onChange={(e)=>setCustomerName(e.target.value)} required />
                 </div>
                 <div className="customer-comment">
                     <label id="label-review">Your Review</label>
-                    <textarea name="cReview" id="customer-input" style={{height:"auto"}} required />
+                    <textarea name="cReview" id="customer-input" value={customerReview} onChange={(e)=> setCustomerReview(e.target.value)} style={{height:"auto"}} required />
                 </div>
                 <CustomerStarRating/>
-                <button id="customer-review-submit" type="submit" onClick={handleReviewSubmit}>Submit</button>
+                <button id="customer-review-submit" type="submit" >Submit</button>
+                </form>
             </div>
             {notificationVisible && (
         <div className="notification">

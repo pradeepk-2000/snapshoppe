@@ -15,9 +15,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-@import "./components/styles/Home.css";
-@import "./components/styles/Header.css";
-@import "./components/styles/Carousel.css";
-@import "./components/styles/Authentication.css";
-@import "../src/components/styles/HomeBottom.css";
+@import "./components/styles/mainPage.css";
+@import "./components/styles/header.css";
+@import "./components/styles/authentication.css";
+@import "../src/components/styles/store_comments.css";
 @import "./components//styles/productIdCategory.css";
+@import "./components/styles/footer.css";
+@import "./components/styles/filter_Cart.css";
+@import "./components/styles/productReviews.css";
+@import "./components/styles/starRating.css";
+@import "./components/styles/features.css";
+@import "./components/styles/productDisplay.css";

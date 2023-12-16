@@ -60,6 +60,12 @@ const ProductItems = ({productItems, deleteCart})=>{
         }
       };
 
+      const handleDelete = (e, item)=>{
+        e.preventDefault();
+        e.stopPropagation();
+        deleteCart(item.id)
+      };
+
     return(
         <>
          <div className="product-filters">
@@ -105,10 +111,7 @@ const ProductItems = ({productItems, deleteCart})=>{
                <div className="item-rating">
                 <AvgStarRating rating={item.rating}/>
                 {deleteCart  &&
-                <button id="delete-cart" data-icon="remove" onClick={(e)=>{
-                  e.preventDefault();
-                  e.stopPropagation();
-                  deleteCart(item.id)}}>
+                <button id="delete-cart" title="Remove" onClick={(e)=>handleDelete(e,item)}>
                   <FontAwesomeIcon icon={faTrashCan}  />
                 </button> }
                </div>

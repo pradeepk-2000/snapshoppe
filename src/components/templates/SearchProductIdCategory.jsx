@@ -14,9 +14,10 @@ const SearchProductIdCategory = ()=>{
     const [product, setProduct] = useState();
     const [errorStatus,setErrorStatus] = useState(true);
     const [quantity, setQuantity] = useState(1);
+    const[productLoading, setProductLoading] = useState(false);
 
     const [notificationVisible, setNotificationVisible] = useState(false);
-    const [notificationContent, setNotifictionContent] = useState("");
+    const [notificationContent, setNotificationContent] = useState("");
     const contextData = useContext(CartContext);
     const api = storeApi();
 
@@ -31,6 +32,7 @@ const SearchProductIdCategory = ()=>{
             }
             else{
                 setErrorStatus(true);
+                setProductLoading(true);
                 console.log("API Error");
             }
         })
@@ -39,6 +41,7 @@ const SearchProductIdCategory = ()=>{
         })
     }else{
         setErrorStatus(true);
+        setProductLoading(true);
     }
     },[]);
 
@@ -65,10 +68,10 @@ const SearchProductIdCategory = ()=>{
     
       const handleAddToCart = () => {
         if (contextData.searchCart(product.id)) {           
-          setNotifictionContent('Item is already in the cart!');
+          setNotificationContent('Item is already in the cart!');
         } else {
           contextData.updateCart(product);
-          setNotifictionContent('Item added to the cart!');
+          setNotificationContent('Item added to the cart!');
         }
         showNotification();
       };
@@ -145,17 +148,13 @@ const SearchProductIdCategory = ()=>{
       )}
             </>
             : 
-            <div className="wrong-productid" style={{textAlign:"center"}}>
+            productLoading ?
+            (<div className="wrong-productid" style={{textAlign:"center"}}>
                 {`Product with id ${id} not found`}
-            </div>}
+            </div>)
+            :
+            <div>Loading.......</div>}
         </div>
     )
 };
 export default React.memo(SearchProductIdCategory);
-
-const arr=[
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcaH-L3K13303SnUFonvT9Ie_CC0FfHZZVw&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcaH-L3K13303SnUFonvT9Ie_CC0FfHZZVw&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcaH-L3K13303SnUFonvT9Ie_CC0FfHZZVw&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcaH-L3K13303SnUFonvT9Ie_CC0FfHZZVw&usqp=CAU"
-]

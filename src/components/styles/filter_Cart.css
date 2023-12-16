@@ -1,0 +1,75 @@
+/* Cart-Page */
+.cart-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .item-rating {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* padding-top: 15px; */
+  }
+  button#delete-cart {
+    background-color: deepskyblue;
+    color: white;
+    padding: 5px 12px;
+    font-size: large;
+    margin: -10px 0px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #ee2020fa;
+    border-radius: 8px;
+  }
+  
+  .cart-error {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 99%;
+  }
+  
+  .cart-error >#cart-error-pic {
+    min-width: 150px;
+    max-width: 70%;
+  }
+  
+  /* Filters  */
+  
+  .product-filters button {
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    border-radius: 50px;
+    font-family: sans-serif;
+  }
+  
+  .product-filters button:hover {
+    background-color: #ccc; 
+  }
+  .clear-filter-btn{
+    color: red;
+    font-weight: bold;
+  }
+  .product-filters button.active {
+    background-color: #ccc;
+    color: blue !important;
+    font-weight: bold;
+  }
+  .product-filters button.active > #filtes-icon{
+     color: orange;
+  } 
+  .product-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .cart-page .product-items:hover{
+    transform: scale(1);
+  }

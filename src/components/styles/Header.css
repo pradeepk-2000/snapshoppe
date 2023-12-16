@@ -172,9 +172,12 @@
         font-size:inherit;
     }
 }
-@media (max-width :320px){
+@media (max-width :300px){
     .header-container{
         min-height: 115px;
+    }
+    .header-container .categories{
+        display: none;
     }
 }
 .active-link,.active {

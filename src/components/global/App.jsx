@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import Home from "./Home";
-import Login from "../templates/Login";
-import Signup from "../templates/Signup";
+import Login from "./Login";
+import Signup from "./Signup"
 import Protected from "../templates/Protected";
 
 function App(){
@@ -18,7 +18,6 @@ function App(){
                        <Home/>
                     </Protected>
                 }/>
-            {/* </Route> */}
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="*" element={<NotFound/>}/>

@@ -44,17 +44,18 @@ export const carouselImages =[
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5TmhVqvvv98E7R_wm0tlZ5B1yGp1J9iEV3g&usqp=CAU",
             "https://pimcore.cdnsbg.com/new---ocblog-article---featured-image-1-_5.png",
         "https://assets.mspimages.in/gear/wp-content/uploads/2022/06/Best-Mobiles-with-6000-mAh-Battery.png",
+        
 ];
 
 export const productReviews =[
     {
         uName:"Yuvraj",
         uReview:"Received last week and its excellent, packing is good",
-        uRating:4
+        uRating:5
     },
     {
-        uName:"Ashish",
-        uReview:"product is good but the cost is high compared to quality",
+        uName:"Smriti",
+        uReview:"product is good but the cost is too high compared to quality",
         uRating:3
     }
 ]
