@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/snapshoppe/static/css/main.a6b06ca1.chunk.css",
+    "main.js": "/snapshoppe/static/js/main.3b6068e3.chunk.js",
+    "main.js.map": "/snapshoppe/static/js/main.3b6068e3.chunk.js.map",
+    "runtime~main.js": "/snapshoppe/static/js/runtime~main.752578ae.js",
+    "runtime~main.js.map": "/snapshoppe/static/js/runtime~main.752578ae.js.map",
+    "static/js/2.fd828c15.chunk.js": "/snapshoppe/static/js/2.fd828c15.chunk.js",
+    "static/js/2.fd828c15.chunk.js.map": "/snapshoppe/static/js/2.fd828c15.chunk.js.map",
+    "index.html": "/snapshoppe/index.html",
+    "precache-manifest.1eac59050cd0afa743e9675a55f78ef0.js": "/snapshoppe/precache-manifest.1eac59050cd0afa743e9675a55f78ef0.js",
+    "service-worker.js": "/snapshoppe/service-worker.js",
+    "static/css/main.a6b06ca1.chunk.css.map": "/snapshoppe/static/css/main.a6b06ca1.chunk.css.map"
+  }
+}
