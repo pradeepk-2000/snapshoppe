@@ -49,7 +49,7 @@ const MainProducts = () =>{
 
                             return(
                         <div className="product-items" key={index}>
-                         <Link to={`/estore/search/${cat}`} >
+                         <Link to={`/snapshoppe/search/${cat}`} >
                            <div className="product-thumbnail">
                                <img src={item.thumbnail} alt={item.title} loading="lazy"/>
                            </div>

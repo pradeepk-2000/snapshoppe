@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 const Protected = ({children})=>{
     const loginStatus = JSON.parse(sessionStorage.getItem('loginStatus')) || false;
 
-    if(loginStatus){
+    if(!loginStatus){
         return <Navigate to="/login"/>
     }
 

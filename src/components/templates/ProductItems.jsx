@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AvgStarRating from "./AvgStarRating";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -97,7 +97,7 @@ const ProductItems = ({productItems, deleteCart})=>{
         {productItems && filteredProducts()?.map((item,index)=>
         (
         <div className="product-items"  key={index}>
-           <Link to={`/estore/search/${item.category}/${item.id}`}>
+           <Link to={`/snapshoppe/search/${item.category}/${item.id}`}>
            <div className="product-thumbnail">
                <img src={item.thumbnail} alt={item.title} loading="lazy"/>
            </div>

@@ -9,9 +9,9 @@ import logo from "../siteIcon/mainLogo.png";
         <div className="profile-info">
           <div className="profile-name">Pradeep Kaviti</div>
           <div className="profile-links">
-            <a href="https://github.com/yourusername" className="profile-link" target="_blank">GitHub</a>
-            <a href="https://twitter.com/yourusername" className="profile-link" target="_blank">Twitter</a>
-            <a href="mailto:youremail@example.com" className="profile-link">Email</a>
+            <a href="https://github.com/yourusername" className="profile-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://twitter.com/yourusername" className="profile-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="mailto:youremail@example.com" className="profile-link" rel="noopener noreferrer">Email</a>
           </div>
         </div>
       </div>

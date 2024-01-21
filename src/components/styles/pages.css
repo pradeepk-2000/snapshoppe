@@ -1,0 +1,19 @@
+.dummyPages{
+    padding: 10px 10px 10px 20px;
+}
+@media (min-width:800px){
+    .dummyPages{
+        padding: 10px 100px 10px 150px;
+    }
+}
+.dummyPages p {
+    color: #999999;
+    font-size: 14px;
+}
+.dummyPages li {
+    color: #999999;
+    font-size: 15px;
+}
+.dummyPages h4,.dummyPages h5,.dummyPages h3 {
+    color: #a38b8b;
+}

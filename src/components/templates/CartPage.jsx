@@ -8,7 +8,7 @@ const CartPage = ()=>{
 
     useEffect(() => {
         setCartItems(contextData.cartDetails);
-        console.log(contextData.cartDetails);
+        // console.log(contextData.cartDetails);
       }, [contextData.cartDetails]);
 
     return(

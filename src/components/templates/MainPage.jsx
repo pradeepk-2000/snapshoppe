@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MainProducts from "./MainProducts";
 import { carouselImages } from "../constants/constants";
 import { saleOffer,daysLeft,newProduct } from "../constants/constants";

@@ -19,7 +19,7 @@ function Signup (){
             if(response !== null){
             console.log(response);
             sessionStorage.setItem("loginStatus",JSON.stringify(true));
-            navigate("/estore");
+            navigate("/snapshoppe");
             }
             else{
                 setError("Try after sometime");

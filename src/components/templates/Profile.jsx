@@ -7,6 +7,7 @@ const Profile = ()=>{
     const handleLogout =()=>{
         sessionStorage.removeItem("loginStatus");
         navigate("/login");
+        window.location.reload();
     };
 
     return(

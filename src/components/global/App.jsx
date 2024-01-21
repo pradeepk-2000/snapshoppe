@@ -13,7 +13,7 @@ function App(){
             <div className="body-container">
             <Routes>
                 <Route index path="/" element={<Login/>}/>
-            <Route path="/estore/*" element={
+            <Route path="/snapshoppe/*" element={
                     <Protected>
                        <Home/>
                     </Protected>

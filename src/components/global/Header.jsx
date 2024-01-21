@@ -2,10 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCircleUser,faCartShopping,faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { defaultPlaceholders } from '../constants/constants';
 
 const Header = ()=>{
 
-    const placeholders = ['shoes', 'womens-dresses','womens-jewellery', 'mens-shirts', 'laptops', 'groceries', 'sun glasses','fragrances', 'watches'];
+    const placeholders = defaultPlaceholders;
     const [currentIndex, setCurrentIndex] = useState(0);
     const [userInput, setUserInput] = useState('');
     const placeholderRef = useRef();
@@ -16,15 +17,12 @@ const Header = ()=>{
 
       useEffect(() => {
         if (!userInput) {
-            // console.log("interval starting");
           const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % placeholders.length);
-            // console.log("interval running");
           }, 2000);
     
           return () => {
             clearInterval(interval);
-            // console.log("interval canceled");
           };
         }
       }, [userInput]);
@@ -60,7 +58,7 @@ const Header = ()=>{
             <div className="navbar">
             <div className="navbar-header">
                 <div className="welcome-title">
-                <span className="welcome">eStore!</span>
+                <span className="welcome">SnapShoppe!</span>
                 </div>
             </div>
                 <div className="search-bar">
@@ -94,15 +92,15 @@ const Header = ()=>{
                 </div>
                 <div className="navbar-collapse">
                     <ul>
-                        <li><NavLink to="/estore" end activeclassname="active-link">
+                        <li><NavLink to="/snapshoppe" end activeclassname="active-link">
                         <FontAwesomeIcon icon={faHouse} id="fonticon"  />Home
                         </NavLink></li>
 
-                        <li><NavLink to="/estore/cart" activeclassname="active-link">
+                        <li><NavLink to="/snapshoppe/cart" activeclassname="active-link">
                         <FontAwesomeIcon icon={faCartShopping} id="fonticon" /> Cart
                         </NavLink></li>
 
-                        <li><NavLink to="/estore/profile" activeclassname="active-link">
+                        <li><NavLink to="/snapshoppe/profile" activeclassname="active-link">
                         <FontAwesomeIcon icon={faCircleUser} id="fonticon" />Profile
                         </NavLink></li>
                     </ul>

@@ -1,4 +1,7 @@
 export const storeUrl = "https://dummyjson.com";
+
+export const defaultPlaceholders = ['shoes', 'womens-dresses','womens-jewellery', 'mens-shirts', 'laptops', 'groceries', 'sun glasses','fragrances', 'watches'];
+
 export const uniqueCategories = [
     "smartphones",
     "laptops",
