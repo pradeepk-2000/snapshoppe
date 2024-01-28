@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ea59d0e78b82241f6a4f354a21df1b2",
+    "revision": "66555c634bfe13c08c775d2cdf4458ec",
     "url": "/snapshoppe/index.html"
   },
   {
-    "revision": "e22ae8b6f921ed13447e",
+    "revision": "1f74acc308bd53cedf18",
     "url": "/snapshoppe/static/css/main.a6b06ca1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/snapshoppe/static/js/2.fd828c15.chunk.js"
   },
   {
-    "revision": "e22ae8b6f921ed13447e",
-    "url": "/snapshoppe/static/js/main.3b6068e3.chunk.js"
+    "revision": "1f74acc308bd53cedf18",
+    "url": "/snapshoppe/static/js/main.9db7ec71.chunk.js"
   },
   {
     "revision": "c88e743d715bbbf0a32d",
