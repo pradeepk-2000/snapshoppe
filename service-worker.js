@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/snapshoppe/precache-manifest.39b98ca2506956de3ac83ab399cd0f92.js"
+  "/snapshoppe/precache-manifest.3f6199fec4ed737236bcc212397fae0b.js"
 );
 
 self.addEventListener('message', (event) => {
