@@ -16,7 +16,7 @@ function Login (){
       api.login(username,password)
       .then((response)=>{
           if(response !== null){
-          console.log(response);
+          // console.log(response);
           sessionStorage.setItem("loginStatus",JSON.stringify(true));
           navigate("/snapshoppe");
           }
@@ -53,7 +53,7 @@ function Login (){
     
           <div className="links"> 
           <span><input type="checkbox" id="showpassword" onChange={(e)=> setShowPassword(!showPassword)}/>show password </span>
-          <a href="/Signup">Signup</a> 
+          <a href="/snapshoppe/signup">Signup</a> 
           </div> 
     
           <div className="inputBox">     

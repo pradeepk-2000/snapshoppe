@@ -26,7 +26,7 @@ const SearchProductIdCategory = ()=>{
         api.getSpecificProduct(id)
         .then((response)=>{
             if(response!== null && response.id){
-                console.log(response);
+                // console.log(response);
                 setProduct(response);
                 setErrorStatus(false);
             }
