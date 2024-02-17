@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/snapshoppe/static/css/main.af9a75b6.chunk.css",
-    "main.js": "/snapshoppe/static/js/main.cb9a5bdb.chunk.js",
-    "main.js.map": "/snapshoppe/static/js/main.cb9a5bdb.chunk.js.map",
+    "main.css": "/snapshoppe/static/css/main.7b4cdcd4.chunk.css",
+    "main.js": "/snapshoppe/static/js/main.fb626a80.chunk.js",
+    "main.js.map": "/snapshoppe/static/js/main.fb626a80.chunk.js.map",
     "runtime~main.js": "/snapshoppe/static/js/runtime~main.752578ae.js",
     "runtime~main.js.map": "/snapshoppe/static/js/runtime~main.752578ae.js.map",
     "static/js/2.fd828c15.chunk.js": "/snapshoppe/static/js/2.fd828c15.chunk.js",
     "static/js/2.fd828c15.chunk.js.map": "/snapshoppe/static/js/2.fd828c15.chunk.js.map",
     "index.html": "/snapshoppe/index.html",
-    "precache-manifest.6b2ce12f9f9f24ac595002453c75a181.js": "/snapshoppe/precache-manifest.6b2ce12f9f9f24ac595002453c75a181.js",
+    "precache-manifest.b22005f1d356188c76149f30c63293ef.js": "/snapshoppe/precache-manifest.b22005f1d356188c76149f30c63293ef.js",
     "service-worker.js": "/snapshoppe/service-worker.js",
-    "static/css/main.af9a75b6.chunk.css.map": "/snapshoppe/static/css/main.af9a75b6.chunk.css.map"
+    "static/css/main.7b4cdcd4.chunk.css.map": "/snapshoppe/static/css/main.7b4cdcd4.chunk.css.map"
   }
 }
