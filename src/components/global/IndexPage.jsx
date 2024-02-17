@@ -9,7 +9,7 @@ function IndexPage (){
     return(
         <div id="container">
             <ContextStore>
-            <BrowserRouter basename={"/"}>
+            <BrowserRouter>
                  <App />
             </BrowserRouter>
             </ContextStore>
