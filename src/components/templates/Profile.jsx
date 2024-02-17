@@ -6,7 +6,7 @@ const Profile = ()=>{
 
     const handleLogout =()=>{
         sessionStorage.removeItem("loginStatus");
-        navigate("/snapshoppe/login");
+        navigate("/login");
         window.location.reload();
     };
 

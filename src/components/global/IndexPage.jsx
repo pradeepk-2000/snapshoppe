@@ -1,6 +1,6 @@
 import React from "react";
 import App from "./App";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ContextStore } from "../contexts/context";
 import "../../index.css";
 

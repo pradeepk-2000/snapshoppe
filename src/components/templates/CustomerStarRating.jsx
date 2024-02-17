@@ -7,7 +7,6 @@ const CustomerStarRating = () => {
   const [hoveredRating, setHoveredRating] = useState(-1);
 
   const handleMouseEnter = (index) => {
-    console.log(index);
     setHoveredRating(index + 1);
   };
 

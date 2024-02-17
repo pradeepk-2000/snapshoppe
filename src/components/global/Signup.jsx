@@ -58,7 +58,7 @@ function Signup (){
     
           <div className="links"> 
           <span><input type="checkbox" id="showpassword" onChange={(e)=> setShowPassword(!showPassword)}/>show password </span>
-          <Link to="/snapshoppe/login">Login</Link> 
+          <Link to="/login">Login</Link> 
           </div> 
     
           <div className="inputBox">     

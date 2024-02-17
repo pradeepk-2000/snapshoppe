@@ -12,14 +12,14 @@ function App(){
         <div className="app-container">
             <div className="body-container">
             <Routes>
-                {/* <Route index path="/" element={<Login/>}/> */}
+                <Route index path="/" element={<Login/>}/>
                 <Route path="/snapshoppe/*" element={
                         <Protected>
                         <Home/>
                         </Protected>
                     }/>
-                <Route path="/snapshoppe/login" element={<Login/>}/>
-                <Route path="/snapshoppe/signup" element={<Signup/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/signup" element={<Signup/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
             </div>
